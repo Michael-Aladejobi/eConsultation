@@ -87,7 +87,7 @@ header {
 .nav__logo {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--primary-color);
 }
 
 .nav__logo span {
