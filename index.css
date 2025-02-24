@@ -99,12 +99,17 @@ header {
   border: none;
   cursor: pointer;
   font-size: 24px;
-  color: #333;
+  color: var(--secondary-color);
   transition: color 0.3s ease;
+  border: 2px solid var(--secondary-color);
+  padding: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .menu-toggle:hover {
-  color: #fff;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
 }
 
 .menu-toggle:focus {
