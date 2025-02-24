@@ -94,6 +94,48 @@ header {
   color: var(--secondary-color);
 }
 
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #fff;
+}
+
+.menu-toggle:focus {
+  outline: none;
+}
+
+.nav__links.active {
+  display: block;
+}
+
+.nav__links {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__links li {
+  margin: 10px 0;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav__links a:hover {
+  color: #007bff;
+}
 .nav__links {
   list-style: none;
   display: flex;
@@ -630,6 +672,12 @@ body.dark-mode .footer__bar {
 }
 
 @media (width < 600px) {
+  .nav__links {
+    display: none;
+  }
+  .contact-us-btn {
+    display: none;
+  }
   .service__header {
     flex-direction: column;
     text-align: center;
