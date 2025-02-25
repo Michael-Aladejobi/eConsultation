@@ -33,7 +33,10 @@
 
     <section class="section__container appointment__container">
       <div class="appointment__header">
-        <h2 class="section__header">Register as a Patient</h2>
+        <br />
+        <br />
+        <br />
+        <h2 class="section__header">Online medical consultation.</h2>
         <p>
           Register as a patient with our healthcare professionals easily using
           the form below.
@@ -56,39 +59,85 @@
             <input
               type="text"
               name="lastName"
-              placeholder=" Last Name"
+              placeholder="Last Name"
               id="lastName"
               required
             />
             <input
               type="email"
-              placeholder=" Email Address"
-              id="address"
-              name="address"
+              placeholder="Email Address"
+              id="email"
+              name="email"
               required
             />
             <input
               type="text"
               placeholder="Enter Residential Address"
-              id="address"
-              name="address"
+              id="residentialAddress"
+              name="residentialAddress"
               required
             />
             <input
               type="text"
-              placeholder="Birthday - DD-MM-YYYY"
+              placeholder="Birthday | DD-MM-YYYY"
               id="dob"
               name="date-of-birth"
               required
             />
-            <!-- <input
-              type=""
-              placeholder="Birthday - DD-MM-YYYY"
-              id="dob"
-              name="date-of-birth"
+            <select
+              id="consultation-method"
+              name="consultation-method"
               required
-            /> -->
-            <input type="text" placeholder="Phone No." id="phoneNo" required />
+            >
+              <option value="" disabled selected>
+                Preferred Method of Consultation
+              </option>
+              <option value="video-call">Video Call</option>
+              <option value="phone-call">Phone Call</option>
+              <option value="e-message">E-Message</option>
+            </select>
+
+            <textarea
+              placeholder="Insert your relevant medical history, Current medication, and allergies. (optional)"
+              id="medicalHistory"
+              name="medicalHistory"
+              rows="4"
+              required
+            ></textarea>
+            <input
+              type="text"
+              placeholder="Enter Current Symptom(s)"
+              id="symptoms"
+              name="symptoms"
+              required
+            />
+            <textarea
+              placeholder="Describe Current symptoms in detail, including start date or time frame duration."
+              id="currentSymptoms"
+              name="currentSymptoms"
+              rows="4"
+              required
+            ></textarea>
+            <input
+              type="text"
+              placeholder="Enter Phone No.:"
+              id="phoneNo"
+              name="phoneNo"
+              required
+            />
+            <textarea
+              placeholder="Is there any additional information you think would be helpful for the doctor to know?"
+              id="additionalInfo"
+              name="additionalInfo"
+              rows="4"
+            ></textarea>
+
+            <label for="consent">
+              <input type="checkbox" id="consent" name="consent" required />
+              I hereby consent to this e-consultation and acknowledge that I
+              understand the limitations of online medical consultation.
+            </label>
+            <br />
             <button class="btn form__btn">Submit</button>
           </form>
         </div>
