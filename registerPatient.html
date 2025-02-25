@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Register | e-Consultation</title>
+  </head>
+  <body>
+    <header>
+      <nav class="section__container nav__container">
+        <div class="nav__logo">e-<span>Consultation</span></div>
+        <ul class="nav__links">
+          <li class="link"><a href="index.html#home">Home</a></li>
+          <li class="link"><a href="index.html#about">About Us</a></li>
+          <li class="link"><a href="index.html#service">Services</a></li>
+          <li class="link"><a href="index.html#pages">Pages</a></li>
+          <li class="link"><a href="index.html#blog">Blog</a></li>
+        </ul>
+        <button class="btn contact-us-btn">Contact Us</button>
+        <button id="dark-mode-toggle" class="btn">
+          <i class="ri-moon-line"></i>
+        </button>
+        <button id="menu-toggle" class="menu-toggle">
+          <i class="ri-menu-line"></i>
+        </button>
+      </nav>
+    </header>
+
+    <section class="section__container appointment__container">
+      <div class="appointment__header">
+        <h2 class="section__header">Register as a Patient</h2>
+        <p>
+          Register as a patient with our healthcare professionals easily using
+          the form below.
+        </p>
+        <small>
+          Please make sure all information provided is accurate and up-to-date.
+        </small>
+      </div>
+      <div class="appointment__form">
+        <div class="header__form">
+          <form>
+            <h4>Register Now</h4>
+            <input
+              type="text"
+              placeholder="First Name"
+              id="firstName"
+              name="firstName"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder=" Last Name"
+              id="lastName"
+              required
+            />
+            <input
+              type="email"
+              placeholder=" Email Address"
+              id="address"
+              name="address"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Enter Residential Address"
+              id="address"
+              name="address"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Birthday - DD-MM-YYYY"
+              id="dob"
+              name="date-of-birth"
+              required
+            />
+            <!-- <input
+              type=""
+              placeholder="Birthday - DD-MM-YYYY"
+              id="dob"
+              name="date-of-birth"
+              required
+            /> -->
+            <input type="text" placeholder="Phone No." id="phoneNo" required />
+            <button class="btn form__btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>e-<span>Consultation</span></h3>
+          <p>
+            We are honored to be a part of your healthcare journey and committed
+            to delivering compassionate, personalized, and top-notch care every
+            step of the way.
+          </p>
+          <p>
+            Trust us with your health, and let us work together to achieve the
+            best possible outcomes for you and your loved ones.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>About Us</h4>
+          <a href="index.html"><p>Home</p></a>
+          <a href="index.html#about"><p>About Us</p></a>
+          <p>Work With Us</p>
+          <p>Our Blog</p>
+          <p>Terms & Conditions</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <p>Search Terms</p>
+          <p>Advance Search</p>
+          <p>Privacy Policy</p>
+          <p>Suppliers</p>
+          <p>Our Stores</p>
+        </div>
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <p><i class="ri-map-pin-2-fill"></i> Abeokuta, Ogun State, Nigeria</p>
+          <p><i class="ri-mail-fill"></i> support@care.com</p>
+          <p><i class="ri-phone-fill"></i> (+234) 911 250 6552</p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <div class="footer__bar__content">
+          <p>Copyright © 2025 eConsultation. All rights reserved.</p>
+          <div class="footer__socials">
+            <span><i class="ri-instagram-line"></i></span>
+            <span><i class="ri-facebook-fill"></i></span>
+            <span><i class="ri-heart-fill"></i></span>
+            <span><i class="ri-twitter-fill"></i></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script defer>
+      // Dark Mode Toggle
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+      const body = document.body;
+
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.contains("dark-mode");
+        darkModeToggle.innerHTML = isDarkMode
+          ? '<i class="ri-sun-line"></i> '
+          : '<i class="ri-moon-line"></i> ';
+        localStorage.setItem("dark-mode", isDarkMode);
+      });
+
+      // Check for saved dark mode preference
+      if (localStorage.getItem("dark-mode") === "true") {
+        body.classList.add("dark-mode");
+        darkModeToggle.innerHTML = '<i class="ri-sun-line"></i> ';
+      }
+
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.querySelector(".nav__links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
